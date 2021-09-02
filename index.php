@@ -18,14 +18,13 @@
         <nav>
             <ul>
                 <li><a href="index.php"> Home</a></li>
-                <li><a href="aboutme.php">About Me</a></li>
+                <li><a href="About.php">About Me</a></li>
                 <?php
                 if (isset($_SESSION["usersID"])) {
                     echo "<li><a href='profil.php'>Profil </a></li>";
                     echo "<li><a href='php/logout.inc.php'>Log Out</a></li>";
                 } else {
                     echo "<li><a href='signup.php'>Sign Up </a></li>";
-                    echo "<li><a href='login.php'>Log In</a></li>";
                 }
                 ?>
 
@@ -64,33 +63,30 @@
 
 <!-- Languages -->
 <section class="languages">
-    <div class="container">
-        <h3 class="stats-heading text-center my-1">
-            Welcome to my first Project using the basiscs HTML, CSS, PHP, MYSQL
-        </h3>
-        <div class="grid grid-5 text-center my-4">
-            <div>
-                <i class="fab fa-html5 fa-3x"></i>
-                <h3>HTML</h3>
-            </div>
-            <div>
-                <i class="fab fa-css3-alt fa-3x"></i>
-                <h3>CSS</h3>
-            </div>
-            <div>
-                <i class="fab fa-php fa-3x"></i>
-                <h3>PHP</h3>
-            </div>
-            <div>
-                <i class="fas fa-database fa-3x"></i>
-                <h3>mySQL</h3>
-            </div>
-            <div>
-                <i class="fab fa-js-square fa-3x"></i>
-                <h3>JavaScript</h3>
-            </div>
+
+    <h2 class="md text-center my-1 py-5">
+        Welcome to my first Project using the basics HTML, CSS, PHP, MYSQL
+    </h2>
+
+    <div class ="container flex">
+        <div class="card">
+            <h4>HTML</h4>
+            <img src="images/icons8-html-5-80.png" alt="">
+        </div>
+        <div class="card">
+            <h4>CSS</h4>
+            <img src="images/icons8-css3-80.png" alt="">
+        </div>
+        <div class="card">
+            <h4>PHP</h4>
+            <img src="images/icons8-php-logo-80.png" alt="">
+        </div>
+        <div class="card">
+            <h4>mySQL</h4>
+            <img src="images/icons8-mysql-logo-80.png" alt="">
         </div>
     </div>
+
 </section>
 <footer class ="footer bg-secondary py-5">
     <div class ="container grid grid-3">
@@ -101,17 +97,17 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="index.php">About Me</a></li>
-                <li><a href="index.php">Login</a></li>
-                <li><a href="index.php">Register</a></li>
+                <li><a href="About.php">About Me</a></li>
+                <li><a href="Register.php">Register</a></li>
             </ul>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="#"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            </div>
         </nav>
+            <div class="social">
+                <a href="https://www.facebook.com/gherghina.cosmin"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/gcosmin/"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/gcosmin1989"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://www.instagram.com/this.cosmin/"><i class="fab fa-instagram fa-2x"></i></a>
+            </div>
+
     </div>
 </footer>
 </body>
