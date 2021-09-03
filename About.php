@@ -1,45 +1,49 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Cosmin Gherghina</title>
-</head>
-<body>
-<div class="navbar">
-    <div class="container flex">
-        <h1 class="logo">Cosmin Gherghina</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php"> Home</a></li>
-                <li><a href="About.php">About Me</a></li>
-                <?php
-                if (isset($_SESSION["usersID"])) {
-                    echo "<li><a href='profil.php'>Profil </a></li>";
-                    echo "<li><a href='php/logout.inc.php'>Log Out</a></li>";
-                } else {
-                    echo "<li><a href='signup.php'>Sign Up </a></li>";
-                }
-                ?>
+<?php include 'header.php' ?>
 
-            </ul>
-        </nav>
-    </div>
-</div>
-<section class="cloud bg-primary my-2 py-2">
-    <div class="container grid">
-        <div class="text-center">
-            <h2 class ="lg">Poze</h2>
-            <p class="lead my-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores blanditiis dignissimos eum incidunt laudantium maiores nostrum nulla officia omnis optio perferendis quae suscipit totam vel, voluptates! Ducimus earum fugiat voluptatum.</p>
+<!-- Head -->
+<section class="features-head bg-primary py-3">
+    <div class="container ">
+        <div>
+            <h1 class="xl">About Me</h1>
+            <p class="lead">
+                After an intense and challenging 7 years working in the heavy industry, I needed a new boost, Loved computers since I was young and curios about how games work, followed my dream to start programming.
+                <br>
+                So here I am!
+            </p>
         </div>
-        <img src="images/DSC_1015.JPG" alt="">
-    </div>
 
+    </div>
 </section>
-</body>
+
+<!-- Sub head -->
+<section class="features-sub-head bg-light py-3">
+    <div class="container grid">
+        <div>
+            <h1 class="md">Follow the code brick road</h1>
+            <p>
+                "What should I do next?" The question that all of us had at least one time.
+                <br>
+                This question started putting my wheels in motion. <br>
+                The answer was simple: "I would like to learn something new!" . So I started a conversation with my girlfriend (now my lovely wife), she suggested unexpectedly to start a course of Computer Science. It was love at first word, so i started searching what should I learn, after some days of researching I decided to do BackEnd Development.
+                <br>
+                Long story short, here I am now, working on my first project!
+
+            </p>
+        </div>
+        <img src="images/developer-icons-55.png" alt="">
+    </div>
+</section>
+
+<section class="features-main my-2">
+    <div class="container grid grid-3">
+        <div class="card flex">
+            <img src="images/Ray.png" style="width: 200px" alt="">
+            <p>I'm an animal person! So meet Ray, my 2yo Labrador as we like to say our Ray of Sunshine. If you are feeling down Ray is the best therapist you will find, you can't stay upset when you see his face! </p>
+        </div>
+        
+    </div>
+</section>
+
+
+<?php include 'footer.php'?>
+

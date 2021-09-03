@@ -1,37 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-          integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Cosmin Gherghina</title>
-</head>
-<body>
-<div class="navbar">
-    <div class="container flex">
-        <h1 class="logo">Cosmin Gherghina</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php"> Home</a></li>
-                <li><a href="About.php">About Me</a></li>
-                <?php
-                if (isset($_SESSION["usersID"])) {
-                    echo "<li><a href='profil.php'>Profil </a></li>";
-                    echo "<li><a href='php/logout.inc.php'>Log Out</a></li>";
-                } else {
-                    echo "<li><a href='signup.php'>Sign Up </a></li>";
-                }
-                ?>
+<?php include 'header.php' ?>
 
-            </ul>
-        </nav>
-    </div>
-</div>
 <!-- Continut -->
 <section class="showcase">
     <div class="container grid">
@@ -43,22 +11,39 @@
                 challenges</p>
             <img src="images/CG_preview_rev_1.png" class="image" alt="Cosmin Gherghina">
         </div>
-        <div class="showcase-form card">
-            <h2>Log In</h2>
-            <form>
-                <div action="php/login.inc.php" method="POST">
-                    <div class="form-control">
-                        <input type="text" name="uid" placeholder="Username/Email">
-                    </div>
-                    <div class="form-control">
-                        <input type="password" name="pwd" placeholder="Password">
-                    </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Log In</button>
-                    <button type="submit" name="submit" class="btn btn-primary">Register</button>
-                </div>
-            </form>
 
+            <?php
+            if(isset($_SESSION["usersID"])){
+                echo"<h2>Now You can visit my CV</h2>";
+            }else{
+
+                echo"<div class='showcase-form card'>
+            <h2>Log In</h2>
+            <form action='php/login.inc.php' method='POST'>
+                <div>
+                    <div class='form-control'>
+                        <input type='text' name='uid' placeholder='Username/Email'>
+                    </div>
+                    <div class='form-control'>
+                        <input type='password' name='pwd' placeholder='Password'>
+                    </div>
+                    <button type='submit' name='submit' class='btn btn-primary'>Log In</button>
+                    <button><a href='signup.php'  class='btn btn-primary'>Register</a></button>
+                </div>
+            </form>";
+            }
+            ?>
         </div>
+        <?php
+        if(isset($_GET['error'])){
+            if($_GET['error'] == "emptyinput"){
+                echo "<p>Te rog completeaza toate campurile</p>";
+            }
+            elseif ($_GET['error']== "wronglogin"){
+                echo "<p>Datele de logare sunt incorecte!</p>";
+            }
+        }
+        ?>
 </section>
 
 <!-- Languages -->
@@ -88,27 +73,4 @@
     </div>
 
 </section>
-<footer class ="footer bg-secondary py-5">
-    <div class ="container grid grid-3">
-        <div>
-            <h1>Cosmin Gherghina</h1>
-            <p>Copyright &copy; 2021</p>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="About.php">About Me</a></li>
-                <li><a href="Register.php">Register</a></li>
-            </ul>
-        </nav>
-            <div class="social">
-                <a href="https://www.facebook.com/gherghina.cosmin"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/gcosmin/"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/gcosmin1989"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.instagram.com/this.cosmin/"><i class="fab fa-instagram fa-2x"></i></a>
-            </div>
-
-    </div>
-</footer>
-</body>
-</html>
+<?php include 'footer.php'?>
