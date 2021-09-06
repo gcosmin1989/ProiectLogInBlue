@@ -42,9 +42,7 @@ p {
     margin: 10px 0;
 }
 
-img {
-    width: 100%;
-}
+
 
 code,
 pre {
@@ -179,21 +177,6 @@ pre {
     font-weight: bold;
 }
 
-/* Cli */
-.cli .grid {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.cli .grid > *:first-child {
-    grid-column: 1 / span 2;
-    grid-row: 1 / span 2;
-}
-
-/* Cloud */
-.cloud .grid {
-    grid-template-columns: 4fr 3fr;
-}
 
 /* Languages */
 
@@ -244,7 +227,7 @@ pre {
     grid-column: 1 / span 2;
 }
 
-/* Docs */
+/* Profile */
 .list{
     margin-left: 80px;
     list-style-type: disc;
@@ -281,15 +264,19 @@ pre {
 }
 
 .fa-facebook:hover {
-    color: #1773EA;
+    color: #000000;
 }
 
 .fa-instagram:hover {
-    color: #B32E87;
+    color: #000000;
+}
+
+.fa-linkedin:hover {
+    color: #000000;
 }
 
 .fa-twitter:hover {
-    color: #1C9CEA;
+    color: #000000;
 }
 
 /* Animations */
@@ -347,6 +334,9 @@ pre {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+    .container.grid {
+        grid-template-columns: 1fr;
+    }
 
     .showcase {
         height: auto;
@@ -362,11 +352,6 @@ pre {
         justify-self: center;
         margin: auto;
         animation: slideInFromBottom 1s ease-in;
-    }
-
-    .cli .grid > *:first-child {
-        grid-column: 1;
-        grid-row: 1;
     }
 
     .features-head,
@@ -623,6 +608,9 @@ div.showcase-form.card.register{
 
 .py-5 {
     padding: 4rem 0;
+}
+.py-6 {
+    padding: 5rem 0;
 }
 
 .p-1 {

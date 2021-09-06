@@ -1,5 +1,4 @@
 <?php include 'header.php'?>
-ses
 <section class="features-head bg-primary">
     <div class="container ">
         <div>

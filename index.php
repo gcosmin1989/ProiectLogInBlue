@@ -49,7 +49,7 @@
 <!-- Languages -->
 <section class="languages">
 
-    <h2 class="md text-center my-1 py-5">
+    <h2 class="md text-center my-1 py-6">
         Welcome to my first Project using the basics HTML, CSS, PHP, MYSQL
     </h2>
 
